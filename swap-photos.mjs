@@ -41,8 +41,13 @@ const before = html;
 // ---------- Swap rules ----------
 const swaps = [];
 
-// 1) Über-uns Salon-Innenraum photo (first salon-interior)
-const ueberPhoto = byQuery['salon-interior']?.[0];
+// 1) Über-uns Salon-Innenraum photo
+//    Prefer salon-interior-v2 (modern wood/leather query → fits Hamburg-Stadtteil-Vibe)
+//    Pick index 2 (skip duplicate Alina-Degli from v1 + softer los-muertos chair) = marcelo-verfe
+//    Fall back to salon-interior[0] if v2 not present.
+const ueberPhoto = byQuery['salon-interior-v2']?.[2]
+  ?? byQuery['salon-interior-v2']?.[0]
+  ?? byQuery['salon-interior']?.[0];
 if (ueberPhoto) {
   swaps.push({
     label: 'Über-uns Salon-Innenraum',

@@ -62,4 +62,9 @@ Self-hosted Photos in `assets/img/` — DSGVO-clean (kein CDN-Embed). Lizenz: Pe
 - "Kostenloses Stock Foto zu altmodisch, antik, antike" — Foto: [Leon Kohle](https://www.pexels.com/de-de/@leon-kohle-3158283) auf [Pexels](https://www.pexels.com/de-de/foto/schreibtisch-vintage-antiquitat-antik-14146722/)
 - "Kostenloses Stock Foto zu ausrüstung, barbier, beruf" — Foto: [cottonbro studio](https://www.pexels.com/de-de/@cottonbro) auf [Pexels](https://www.pexels.com/de-de/foto/textur-holzern-frisur-vorbereitung-3992874/)
 - "Kostenloses Stock Foto zu altmodisch, barbier, besatz" — Foto: [Los Muertos Crew](https://www.pexels.com/de-de/@cristian-rojas) auf [Pexels](https://www.pexels.com/de-de/foto/holz-werkzeuge-retro-pinsel-8867162/)
+- "Schwarzer Und Silberner Allzweck Lederstuhl In Einem Barbershop" — Foto: [Los Muertos Crew](https://www.pexels.com/de-de/@cristian-rojas) auf [Pexels](https://www.pexels.com/de-de/foto/schwarzer-und-silberner-allzweck-lederstuhl-in-einem-barbershop-8867166/)
+- "Kostenloses Stock Foto zu anspruchsvoll, ästhetisch, ausleuchtung" — Foto: [the iop](https://www.pexels.com/de-de/@the-iop-86002042) auf [Pexels](https://www.pexels.com/de-de/foto/34529825/)
+- "Mann, Der Seinen Haarschnitt Hat" — Foto: [Th2city Santana](https://www.pexels.com/de-de/@th2city) auf [Pexels](https://www.pexels.com/de-de/foto/mann-der-seinen-haarschnitt-hat-1860567/)
+- "Gemütlicher Vintage-Friseursalon mit rotem Stuhl und Retro-Dekor durch das Fenster." — Foto: [🇻🇳🇻🇳 Việt Anh Nguyễn 🇻🇳🇻🇳](https://www.pexels.com/de-de/@vi-t-anh-nguy-n-2150409023) auf [Pexels](https://www.pexels.com/de-de/foto/vintage-barber-shop-interieur-mit-roten-stuhl-31395604/)
+- "Kostenloses Stock Foto zu barbershop-werkzeuge, fashion, friseur" — Foto: [Marcelo Verfe](https://www.pexels.com/de-de/@marceloverfe) auf [Pexels](https://www.pexels.com/de-de/foto/sitz-friseur-barbier-ledersessel-18702143/)
 <!-- PEXELS-ATTRIBUTION-END -->

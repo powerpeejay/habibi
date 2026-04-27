@@ -246,6 +246,71 @@
       "avg_color": "#715446",
       "query": "scissors comb wooden table detail",
       "query_name": "tools"
+    },
+    {
+      "id": 8867166,
+      "local_filename": "salon-interior-v2-los-muertos-crew-8867166.jpg",
+      "photographer": "Los Muertos Crew",
+      "photographer_url": "https://www.pexels.com/de-de/@cristian-rojas",
+      "pexels_page": "https://www.pexels.com/de-de/foto/schwarzer-und-silberner-allzweck-lederstuhl-in-einem-barbershop-8867166/",
+      "alt": "Schwarzer Und Silberner Allzweck Lederstuhl In Einem Barbershop",
+      "width": 2677,
+      "height": 4008,
+      "avg_color": "#91826F",
+      "query": "modern barbershop chair wood interior",
+      "query_name": "salon-interior-v2"
+    },
+    {
+      "id": 34529825,
+      "local_filename": "salon-interior-v2-the-iop-34529825.jpg",
+      "photographer": "the iop",
+      "photographer_url": "https://www.pexels.com/de-de/@the-iop-86002042",
+      "pexels_page": "https://www.pexels.com/de-de/foto/34529825/",
+      "alt": "Kostenloses Stock Foto zu anspruchsvoll, ästhetisch, ausleuchtung",
+      "width": 4536,
+      "height": 6804,
+      "avg_color": "#2D241D",
+      "query": "modern barbershop chair wood interior",
+      "query_name": "salon-interior-v2"
+    },
+    {
+      "id": 1860567,
+      "local_filename": "salon-interior-v2-th2city-santana-1860567.jpg",
+      "photographer": "Th2city Santana",
+      "photographer_url": "https://www.pexels.com/de-de/@th2city",
+      "pexels_page": "https://www.pexels.com/de-de/foto/mann-der-seinen-haarschnitt-hat-1860567/",
+      "alt": "Mann, Der Seinen Haarschnitt Hat",
+      "width": 3169,
+      "height": 4754,
+      "avg_color": "#7F6A63",
+      "query": "modern barbershop chair wood interior",
+      "query_name": "salon-interior-v2"
+    },
+    {
+      "id": 31395604,
+      "local_filename": "salon-interior-v2-vi-t-anh-nguy-n-31395604.jpg",
+      "photographer": "🇻🇳🇻🇳 Việt Anh Nguyễn 🇻🇳🇻🇳",
+      "photographer_url": "https://www.pexels.com/de-de/@vi-t-anh-nguy-n-2150409023",
+      "pexels_page": "https://www.pexels.com/de-de/foto/vintage-barber-shop-interieur-mit-roten-stuhl-31395604/",
+      "alt": "Gemütlicher Vintage-Friseursalon mit rotem Stuhl und Retro-Dekor durch das Fenster.",
+      "width": 3512,
+      "height": 6240,
+      "avg_color": "#937863",
+      "query": "modern barbershop chair wood interior",
+      "query_name": "salon-interior-v2"
+    },
+    {
+      "id": 18702143,
+      "local_filename": "salon-interior-v2-marcelo-verfe-18702143.jpg",
+      "photographer": "Marcelo Verfe",
+      "photographer_url": "https://www.pexels.com/de-de/@marceloverfe",
+      "pexels_page": "https://www.pexels.com/de-de/foto/sitz-friseur-barbier-ledersessel-18702143/",
+      "alt": "Kostenloses Stock Foto zu barbershop-werkzeuge, fashion, friseur",
+      "width": 3840,
+      "height": 5760,
+      "avg_color": "#5B504E",
+      "query": "modern barbershop chair wood interior",
+      "query_name": "salon-interior-v2"
     }
   ]
 }
