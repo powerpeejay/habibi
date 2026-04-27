@@ -8,18 +8,18 @@
   <meta name="theme-color" content="#0d0a08">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="canonical" href="https://habibi-kappa.vercel.app/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="New Look by Habibi · Friseur in Hamburg-Meiendorf">
   <meta property="og:description" content="Stadtteilfriseur. Herrenschnitt ab 16 €. Walk-in oder anrufen — 040 8787 5437.">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:url" content="https://habibi.vercel.app/">
-  <meta property="og:image" content="https://habibi.vercel.app/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://habibi-kappa.vercel.app/">
+  <meta property="og:image" content="https://habibi-kappa.vercel.app/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">
@@ -27,10 +27,19 @@
     "@context": "https://schema.org",
     "@type": "HairSalon",
     "name": "New Look by Habibi",
-    "image": "https://habibi.vercel.app/assets/img/og-image.jpg",
-    "url": "https://habibi.vercel.app/",
+    "slogan": "Setz dich. Entspann dich. Lass uns schneiden.",
+    "image": [
+      "https://habibi-kappa.vercel.app/assets/img/og-image.jpg",
+      "https://habibi-kappa.vercel.app/assets/img/salon-interior-v2-marcelo-verfe-18702143.jpg"
+    ],
+    "url": "https://habibi-kappa.vercel.app/",
     "telephone": "+49-40-87875437",
     "priceRange": "€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card",
+    "sameAs": [
+      "https://www.facebook.com/pages/New-Look-By-Habibi/123275751094343"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Meiendorfer Str. 115",
@@ -47,9 +56,15 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "09:00",
         "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "16:00"
       }
     ],
     "areaServed": "Hamburg-Meiendorf"
@@ -59,14 +74,16 @@
 <body>
   <a href="#main" class="skip-link">Zum Inhalt springen</a>
 
-  <header class="topbar" data-state="hero">
-    <a href="#" class="topbar-mark" aria-label="New Look by Habibi — Startseite">
-      <span class="topbar-mark-script">New Look by Habibi</span>
-    </a>
-    <a href="tel:+4940 8787 5437" class="topbar-phone">
-      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span>040 8787 5437</span>
-    </a>
+  <header>
+    <nav class="topbar" data-state="hero" aria-label="Salon-Header">
+      <a href="#" class="topbar-mark" aria-label="New Look by Habibi — Startseite">
+        <span class="topbar-mark-script">New Look by Habibi</span>
+      </a>
+      <a href="tel:+4940 8787 5437" class="topbar-phone" aria-label="Anrufen — 040 8787 5437">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>040 8787 5437</span>
+      </a>
+    </nav>
   </header>
 
   <main id="main">
@@ -248,8 +265,9 @@
                 Öffnungszeiten
               </dt>
               <dd>
-                Montag – Samstag<br>
-                <span class="muted">aktuelle Zeiten kurz erfragen</span>
+                Mo–Fr: 9–19 Uhr<br>
+                Sa: 9–16 Uhr<br>
+                <span class="muted">So: geschlossen</span>
               </dd>
             </div>
           </dl>

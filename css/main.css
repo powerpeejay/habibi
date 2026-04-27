@@ -25,8 +25,9 @@
   /* Accent */
   --color-accent: #ff7a2c;
   --color-accent-hover: #ff9a55;
-  --color-accent-deep: #d4501a;
-  --color-accent-deep-hover: #b3400e;
+  /* Deep variant für Light-Sections — getestet ≥ 4.5:1 vs --color-bg-light + --color-surface-2 (Lighthouse 2026-04-27) */
+  --color-accent-deep: #b3400e;
+  --color-accent-deep-hover: #99360b;
   --color-glow: rgba(255, 122, 44, 0.22);
   --color-focus-ring: #ff7a2c;
 
@@ -759,12 +760,12 @@ p {
 .btn-primary.btn-on-light {
   background: var(--color-accent-deep);
   color: #ffffff;
-  box-shadow: 0 8px 24px -12px rgba(212, 80, 26, 0.4);
+  box-shadow: 0 8px 24px -12px rgba(179, 64, 14, 0.4);
 }
 .btn-primary.btn-on-light:hover {
   background: var(--color-accent-deep-hover);
   transform: translateY(-1px);
-  box-shadow: 0 12px 28px -10px rgba(212, 80, 26, 0.5);
+  box-shadow: 0 12px 28px -10px rgba(179, 64, 14, 0.5);
 }
 
 .btn-ghost {

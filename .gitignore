@@ -6,4 +6,4 @@ node_modules/
 screenshots/
 *.log
 .env
-.env.local
+.env.locallighthouse.json
