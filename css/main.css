@@ -790,31 +790,7 @@ p {
 
 .icon { flex-shrink: 0; }
 
-/* ---------- 14. Sticky Mobile CTA ----------------------------------------- */
-.sticky-cta {
-  position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 16px);
-  right: 16px;
-  z-index: 60;
-  display: none;
-  align-items: center;
-  gap: var(--space-2);
-  padding: 12px 18px;
-  background: var(--color-accent);
-  color: #1a0a04;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(255, 122, 44, 0.15);
-  transition: transform var(--transition), background-color var(--transition);
-}
-.sticky-cta:hover { background: var(--color-accent-hover); transform: translateY(-1px); }
-@media (max-width: 767px) {
-  .sticky-cta { display: inline-flex; }
-}
-
-/* ---------- 15. Responsive Adjustments ------------------------------------ */
+/* ---------- 14. Responsive Adjustments ------------------------------------ */
 @media (max-width: 767px) {
   .hero-meta { gap: var(--space-4); }
   .hero-ctas { gap: var(--space-3); flex-direction: column; align-items: stretch; }
