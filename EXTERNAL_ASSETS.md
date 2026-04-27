@@ -17,7 +17,7 @@ These don't fire requests until the user clicks. Each opens in a new tab.
 | URL | Where | Purpose |
 |---|---|---|
 | `https://www.google.com/maps/search/?api=1&query=Meiendorfer+Str.+115%2C+22145+Hamburg` | Standort-Section, Footer-Map-Link | Google Maps Suchergebnis öffnen |
-| `https://www.facebook.com/` | Footer | Facebook-Profil des Salons (URL TBD vom Inhaber) |
+| `https://www.facebook.com/pages/New-Look-By-Habibi/123275751094343` | Footer | Facebook-Profil des Salons |
 | `https://ec.europa.eu/consumers/odr/` | Impressum | EU-Streitschlichtung (gesetzliche Pflichtangabe) |
 | `https://datenschutz-hamburg.de/` | Datenschutz | Hamburg DPA (gesetzliche Pflichtangabe) |
 | `https://policies.google.com/privacy` | Datenschutz | Google-Datenschutz (für externe-Links-Abschnitt) |
