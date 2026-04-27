@@ -59,22 +59,11 @@ if (ueberPhoto) {
   console.warn('⚠ no "salon-interior" photo available — Über-uns will keep placeholder');
 }
 
-// 2) Team portraits (6 slots)
-const TEAM_NAMES = ['Reza', 'Ali', 'Mahmoud', 'Daniel', 'Karim', 'Omid'];
-const teamPhotos = byQuery['team-portrait'] || [];
-for (let i = 0; i < TEAM_NAMES.length; i++) {
-  const photo = teamPhotos[i];
-  if (!photo) {
-    console.warn(`⚠ no "team-portrait" photo for slot ${i + 1} (${TEAM_NAMES[i]}) — keeping placeholder`);
-    continue;
-  }
-  swaps.push({
-    label: `Team-Portrait #${i + 1} (${TEAM_NAMES[i]})`,
-    pattern: new RegExp(`https://placehold\\.co/400x500/2d2620/faf7f2\\?text=${TEAM_NAMES[i]}`),
-    target: `/assets/img/${photo.local_filename}`,
-    photographer: photo.photographer,
-  });
-}
+// 2) Team portraits — DEAKTIVIERT.
+//    Inhaber-Wahl 2026-04-27: Person1.png / Person2.png / Person3.png in /assets/img/
+//    werden manuell für die 6 Stylist-Cards genutzt (Watercolor-Illustrationen, kein Pexels).
+//    Wenn der Inhaber später echte Photos liefert: hier wieder aktivieren ODER
+//    Person1/2/3.png durch echte Files mit gleichen Namen ersetzen.
 
 // ---------- Apply ----------
 let applied = 0, missed = 0;
