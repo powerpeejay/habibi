@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "surface-tint": "#a63c00",
+                    "surface-bright": "#faf9f8",
+                    "tertiary": "#755717",
+                    "tertiary-fixed-dim": "#e9c176",
+                    "secondary-fixed-dim": "#82d3de",
+                    "primary-fixed-dim": "#ffb598",
+                    "surface-dim": "#dadad9",
+                    "surface-container-highest": "#e3e2e1",
+                    "inverse-surface": "#2f3130",
+                    "primary-fixed": "#ffdbce",
+                    "on-secondary-fixed-variant": "#004f56",
+                    "outline": "#8d7166",
+                    "on-background": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#faf9f8",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5d4201",
+                    "tertiary-fixed": "#ffdea5",
+                    "outline-variant": "#e1bfb3",
+                    "on-tertiary-container": "#fffbff",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#9ff0fb",
+                    "surface-container-low": "#f4f3f2",
+                    "on-secondary-container": "#066f79",
+                    "on-primary-fixed": "#370e00",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1a1c1c",
+                    "primary": "#a23a00",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f1f0f0",
+                    "surface-variant": "#e3e2e1",
+                    "secondary": "#006972",
+                    "on-primary-fixed-variant": "#7e2c00",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#90702e",
+                    "surface-container-high": "#e9e8e7",
+                    "surface-container": "#eeeeed",
+                    "background": "#faf9f8",
+                    "secondary-container": "#9ff0fb",
+                    "inverse-primary": "#ffb598",
+                    "on-secondary-fixed": "#001f23",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#fffbff",
+                    "on-surface-variant": "#594138",
+                    "on-tertiary-fixed": "#261900",
+                    "primary-container": "#ca4b00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Noto Serif"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "headline-md": ["Noto Serif"],
+                    "display-lg": ["Noto Serif"],
+                    "body-md": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .persian-pattern {
+            background-color: transparent;
+            background-image: radial-gradient(#a23a00 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-stone-50 dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 shadow-sm">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-8 py-6">
+<div class="text-2xl font-black text-orange-600 dark:text-orange-500 font-serif tracking-tight">New Look by Habibi</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-serif text-base font-bold text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 dark:border-orange-500 pb-1" href="#">Home</a>
+<a class="font-serif text-base font-medium text-stone-600 dark:text-stone-400 hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-300" href="#leistungen">Leistungen</a>
+<a class="font-serif text-base font-medium text-stone-600 dark:text-stone-400 hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-300" href="#uber-uns">Über uns</a>
+<a class="font-serif text-base font-medium text-stone-600 dark:text-stone-400 hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-300" href="#kontakt">Kontakt</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transform transition-transform text-orange-600">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<button class="md:hidden text-orange-600">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Modern Barbershop" class="w-full h-full object-cover" data-alt="Modern barbershop interior with warm pendant lighting, sleek leather chairs, and dark wood accents in a sophisticated European style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWva9bzjK9N1YAl2OGmBsrAfJiAoa9CU4ou8wqLhgD5zbbRp6F4LUSbAUK9QEx_c7miqtdQ_Ms0b8eO54bpV8qt5B2M8pXjbSjuIWphl5hw5PkOREb6MaIRWVs91z2q0sj90c49OAoYCxe-lRRtGdMW5c2h73dL5hTlVzQgOLUXzJsUyQf4uuUCzTmVSPtnSnC49m-0bESGZ4NFWqkmI3A4D8KEun_b88u3-uhbko60WpCviwx1I3wJZx-sjH7DqpHb-AXqn5koAI"/>
+<div class="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1200px] mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg text-white mb-6">Willkommen bei Habibi</h1>
+<p class="font-body-lg text-body-lg text-stone-200 mb-8 border-l-4 border-primary pl-6">Ihr freundlicher Friseur mit persischen Wurzeln in Hamburg Meiendorf.</p>
+</div>
+</div>
+</section>
+<!-- Über Uns Section -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden" id="uber-uns">
+<div class="persian-pattern absolute inset-0"></div>
+<div class="max-w-[1200px] mx-auto px-8 relative z-10">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<span class="text-primary font-label-md tracking-widest uppercase">Unsere Geschichte</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">5 Meister, eine Leidenschaft</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Bei New Look by Habibi verschmilzt die Präzision des Hamburger Handwerks mit der jahrtausendealten Tradition persischer Gastfreundschaft. Unsere fünf Meisterfriseure bringen ihre Expertise aus dem Iran und den angrenzenden Regionen direkt nach Meiendorf.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Für uns ist jeder Haarschnitt ein Kunstwerk und jeder Kunde ein geschätzter Gast in unserem Zuhause. Wir nehmen uns die Zeit, die Sie verdienen.
+                        </p>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="p-4 bg-white rounded-lg shadow-sm border-l-2 border-primary">
+<p class="text-primary font-bold text-xl">5</p>
+<p class="text-sm font-label-sm">Meisterfriseure</p>
+</div>
+<div class="p-4 bg-white rounded-lg shadow-sm border-l-2 border-primary">
+<p class="text-primary font-bold text-xl">100%</p>
+<p class="text-sm font-label-sm">Handwerk</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<img alt="Barber at work" class="rounded-xl shadow-lg mt-8" data-alt="Close-up of a skilled barber carefully styling hair with professional tools in a warm, atmospheric setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmzcGlRAPtBlgfjSBiL5RvxHMR46YDDTXzvgZ5n2iySfZG3bGbptaZ7cCYMP4qxB0ZoLT9qWA0M2_3NUbkW_Q0W_Bny6qXseejZKG81o_OrWrw6VxDyugc0jg0U1EZH46O409FJjE-juu_8PhvKglg5a_o8l2MLKvAtHOJSEVNI43_9ppHox7agq_DwzgVaUjM1bXoC1ZwFKhKfoYy0SHCmTwWYVTF7CSY-ppslC_w7U0g07R6PRGeu-eDqZTLtb6_hqRsQVHMfFo"/>
+<img alt="Traditional Barbering" class="rounded-xl shadow-lg" data-alt="Traditional straight razor shaving service with hot towel and foam in a luxury barbershop environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEQHq6mWhI_9W3sfGODfMsaoLrEWZEPkMFEt9GdsTFlAojHGCVRyuZOAEdCG7_Hsv7cW4OZsEF5_UmOEMJ8XVt_ZoL1BuN3uwsUokTiJsfxCjBIR9LuHyy1DLen386dR2HDmptRff0rE7EzVOIppATXx1UlYosTdRhBU1wafYHJxXvW_8bEKshQzlhIeA8hXxrBXxBOkjYx_MP4-Xfmo8vwUnp4YAE29mDnlSn8Wmlf4zWA52bmkgaeQd4Zm6b9nznzcI2QChFeQ8"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Leistungen Section (Bento Style) -->
+<section class="py-24 bg-white" id="leistungen">
+<div class="max-w-[1200px] mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Unsere Leistungen</h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Large Feature -->
+<div class="md:col-span-2 bg-stone-50 p-10 rounded-xl flex flex-col justify-between border border-stone-100 shadow-sm group hover:shadow-md transition-shadow">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="content_cut">content_cut</span>
+<h3 class="font-headline-md text-headline-md mb-4">Herrenschnitt &amp; Styling</h3>
+<p class="text-on-surface-variant font-body-md max-w-md">Klassische und moderne Schnitte, individuell auf Ihre Gesichtsform und Ihren Stil abgestimmt. Inklusive ausführlicher Beratung.</p>
+</div>
+<div class="mt-8 pt-6 border-t border-stone-200 flex justify-between items-center">
+<span class="font-label-md text-stone-500">AB 25,00 €</span>
+<span class="font-label-md text-stone-500">30 - 45 MIN</span>
+</div>
+</div>
+<!-- Small Feature 1 -->
+<div class="bg-primary text-white p-10 rounded-xl flex flex-col justify-between shadow-lg">
+<div>
+<span class="material-symbols-outlined text-white text-4xl mb-6" data-icon="face">face</span>
+<h3 class="font-headline-md text-headline-md mb-4">Bartpflege</h3>
+<p class="text-orange-100 font-body-md">Traditionelle persische Bartpflege mit Konturenschnitt und Pflegeölen.</p>
+</div>
+<div class="mt-8 pt-6 border-t border-orange-400 flex justify-between items-center">
+<span class="font-label-md">AB 15,00 €</span>
+<span class="font-label-md">20 MIN</span>
+</div>
+</div>
+<!-- Small Feature 2 -->
+<div class="bg-stone-900 text-white p-10 rounded-xl flex flex-col justify-between shadow-lg">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="spa">spa</span>
+<h3 class="font-headline-md text-headline-md mb-4">Wellness-Paket</h3>
+<p class="text-stone-400 font-body-md">Kopfmassage, Gesichtspflege und orientalischer Tee für die ultimative Entspannung.</p>
+</div>
+<div class="mt-8 pt-6 border-t border-stone-700 flex justify-between items-center">
+<span class="font-label-md text-primary">AB 40,00 €</span>
+<span class="font-label-md text-stone-500">60 MIN</span>
+</div>
+</div>
+<!-- Medium Feature -->
+<div class="md:col-span-2 bg-stone-50 p-10 rounded-xl border border-stone-100 shadow-sm flex items-center gap-8">
+<div class="hidden sm:block w-1/3">
+<img alt="Hair color" class="rounded-lg object-cover h-48 w-full" data-alt="Artistic shot of hair coloring tools and professional salon products on a clean workstation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqukyd1-VXSw5H_9OpdMrrKgoxUOzk4XFKc3ak-6zVV-_Mqkt9FkUPJcqfIu62ewFsxRxQ9UCZEZbjcijWFIOVyMDkJ1VoUlrzkZxH-eeXhT4-qdHlpBKa5mWcW_yNpkJNHTYEJETeDRvXQnQHBKQU_ugUoG0A9cLW397kNcjC7cqrfghv5fFD1GOUNC6NwZBLmVLLwQAQKJS1GQCsWfx4wt7SFqq08sCHR6SwzFiRk1u2O4DQsOGXnd5z_sNh65WJBQpmIMnG0cQ"/>
+</div>
+<div class="sm:w-2/3">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="palette">palette</span>
+<h3 class="font-headline-md text-headline-md mb-2">Färben &amp; Highlights</h3>
+<p class="text-on-surface-variant font-body-md">Professionelle Farbberatung und Umsetzung mit hochwertigen, schonenden Produkten.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Kontakt & Besuch Section -->
+<section class="py-24 bg-surface-container-high" id="kontakt">
+<div class="max-w-[1200px] mx-auto px-8">
+<div class="grid md:grid-cols-2 gap-12">
+<div class="bg-white p-12 rounded-2xl shadow-sm border border-stone-100">
+<h2 class="font-headline-lg text-headline-lg mb-8">Besuchen Sie uns</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<p class="font-bold font-serif mb-1">Adresse</p>
+<p class="text-on-surface-variant">Meiendorfer Str. 123<br/>22145 Hamburg Meiendorf</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<div>
+<p class="font-bold font-serif mb-1">Öffnungszeiten</p>
+<div class="grid grid-cols-2 gap-x-8 text-on-surface-variant">
+<span>Mo - Fr:</span><span>09:00 - 19:00</span>
+<span>Samstag:</span><span>09:00 - 16:00</span>
+<span>Sonntag:</span><span>Geschlossen</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<div>
+<p class="font-bold font-serif mb-1">Telefon</p>
+<p class="text-on-surface-variant">040 / 123 456 78</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-sm h-full min-h-[400px] grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Map placeholder" class="w-full h-full object-cover" data-alt="Aerial urban map view of Hamburg Meiendorf district with clean minimalist styling." data-location="Hamburg Meiendorf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwS0aIKirrPHNajRgokRCr_FdArNXVl-YoSxsZq_7hqH0CQ_WC7CIHsg6YfLAYmHEpyRcvWi91_8nWTsWvrV5TnlreEhSCQzGXeNdgrIhpNjveuTGRfhaqRSyr5PTP76RBzxQ3NP9_3pejTbO2_sqjJZPbUjvf_O96o9ENNt8QLx1nD6Y97qOcMvfxSbRv-vyqiD2_G6ch8xEK9ettCwaFQ8jB2IqV2T2fPLz4-Jk7bDLYLn6iTpRlxr0IaK9Stj7BdoX9emWmpC4"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800">
+<div class="max-w-[1200px] mx-auto py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-bold text-stone-800 dark:text-stone-200 font-serif">New Look by Habibi</div>
+<div class="flex gap-8">
+<a class="font-serif text-sm text-stone-500 dark:text-stone-400 hover:text-orange-600 hover:underline transition-all" href="#">Impressum</a>
+<a class="font-serif text-sm text-stone-500 dark:text-stone-400 hover:text-orange-600 hover:underline transition-all" href="#">Datenschutz</a>
+<a class="font-serif text-sm text-stone-500 dark:text-stone-400 hover:text-orange-600 hover:underline transition-all" href="#">AGB</a>
+<a class="font-serif text-sm text-stone-500 dark:text-stone-400 hover:text-orange-600 hover:underline transition-all" href="#kontakt">Kontakt</a>
+</div>
+<p class="font-serif text-sm text-stone-500 dark:text-stone-400 text-center md:text-right">
+                © 2024 New Look by Habibi. Alle Rechte vorbehalten. Ihr Barbershop in Hamburg Meiendorf.
+            </p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Karte: Meiendorfer Str. 115, 22145 Hamburg">
+  <defs>
+    <pattern id="grain" patternUnits="userSpaceOnUse" width="160" height="160">
+      <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2"/></filter>
+      <rect width="160" height="160" filter="url(#n)" opacity="0.5"/>
+    </pattern>
+    <linearGradient id="pinShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(212, 80, 26, 0.35)"/>
+      <stop offset="100%" stop-color="rgba(212, 80, 26, 0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="720" fill="#f3ede4"/>
+  <rect width="720" height="720" fill="url(#grain)" opacity="0.06"/>
+
+  <!-- Stylized street grid (hairlines) -->
+  <g stroke="#d4c5af" stroke-width="1.2" fill="none" opacity="0.7">
+    <!-- Horizontal main road (Meiendorfer Str.) - bold accent line -->
+    <line x1="0" y1="360" x2="720" y2="360" stroke="#c8a98a" stroke-width="3" opacity="0.6"/>
+
+    <!-- Side streets -->
+    <line x1="0" y1="200" x2="720" y2="200"/>
+    <line x1="0" y1="520" x2="720" y2="520"/>
+    <line x1="0" y1="640" x2="720" y2="640"/>
+    <line x1="0" y1="80" x2="720" y2="80"/>
+
+    <!-- Vertical streets -->
+    <line x1="160" y1="0" x2="160" y2="720"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="480" y1="0" x2="480" y2="720"/>
+    <line x1="600" y1="0" x2="600" y2="720"/>
+
+    <!-- Diagonal accent -->
+    <line x1="0" y1="0" x2="720" y2="720" stroke-dasharray="2 8" opacity="0.3"/>
+  </g>
+
+  <!-- Building blocks (subtle filled squares) -->
+  <g fill="#e6dccd" opacity="0.5">
+    <rect x="200" y="240" width="80" height="80" rx="2"/>
+    <rect x="400" y="240" width="60" height="80" rx="2"/>
+    <rect x="180" y="400" width="120" height="80" rx="2"/>
+    <rect x="380" y="400" width="100" height="80" rx="2"/>
+    <rect x="540" y="240" width="40" height="80" rx="2"/>
+    <rect x="60" y="240" width="80" height="80" rx="2"/>
+  </g>
+
+  <!-- Street name label, faint, on the bold horizontal -->
+  <text x="40" y="350" font-family="Inter, system-ui, sans-serif" font-size="11" letter-spacing="0.18em" fill="#8d7166" font-weight="500" text-transform="uppercase" opacity="0.6">MEIENDORFER STRASSE</text>
+
+  <!-- Pin shadow ellipse -->
+  <ellipse cx="360" cy="395" rx="40" ry="10" fill="url(#pinShadow)"/>
+
+  <!-- Pin -->
+  <g transform="translate(360, 360)">
+    <!-- Pin body -->
+    <path d="M 0 -55 C -28 -55 -50 -33 -50 -5 C -50 22 -25 40 0 70 C 25 40 50 22 50 -5 C 50 -33 28 -55 0 -55 Z" fill="#ff7a2c" stroke="#1a1614" stroke-width="2"/>
+    <!-- Pin inner -->
+    <circle cx="0" cy="-8" r="14" fill="#faf7f2"/>
+    <!-- Glow halo -->
+    <circle cx="0" cy="-8" r="44" fill="none" stroke="#ff7a2c" stroke-width="2" opacity="0.25"/>
+    <circle cx="0" cy="-8" r="64" fill="none" stroke="#ff7a2c" stroke-width="1" opacity="0.15"/>
+  </g>
+
+  <!-- Address label -->
+  <g transform="translate(360, 480)" text-anchor="middle">
+    <rect x="-150" y="0" width="300" height="64" rx="32" fill="#1a1614"/>
+    <text y="28" font-family="Inter, system-ui, sans-serif" font-size="10" letter-spacing="0.18em" fill="#ff7a2c" font-weight="600">NEW LOOK BY HABIBI</text>
+    <text y="50" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#faf7f2" font-weight="500" letter-spacing="0.02em">Meiendorfer Str. 115 · 22145 Hamburg</text>
+  </g>
+
+  <!-- Frame -->
+  <rect x="0" y="0" width="720" height="720" fill="none" stroke="#e6dccd" stroke-width="2"/>
+</svg>

@@ -1,0 +1,226 @@
+# DESIGN.md — [Client Name]
+
+> Per-client visual system. Read by any AI agent before generating UI.
+> Format follows the Google Stitch DESIGN.md spec, adapted for DACH SME projects.
+> Pair with `CLAUDE.md` (build rules) in the project root.
+
+---
+
+## 1. Visual Theme & Atmosphere
+
+**Direction:** [pick one from CLAUDE.md §1, e.g. `warm-organic`]
+**Mood (3 words):** [e.g. handcrafted, unhurried, regional]
+**Density:** [generous / balanced / dense]
+**One-line philosophy:** [e.g. "Reads like a Sunday-morning regional newspaper, not a SaaS landing page."]
+
+**Reference anchors** (sites whose feel we're aiming at, not copying):
+- [URL 1]
+- [URL 2]
+- [URL 3]
+
+---
+
+## 2. Color Palette & Roles
+
+Define semantic role first, then the value. Hex literals never appear in markup — only CSS variables.
+
+| Token | Hex | Role |
+|---|---|---|
+| `--color-bg` | `#FAF7F2` | Base canvas |
+| `--color-surface` | `#FFFFFF` | Elevated surface (cards) |
+| `--color-surface-2` | `#F1ECE3` | Secondary surface |
+| `--color-border` | `#E5DFD3` | Hairlines, dividers |
+| `--color-text` | `#1C1A17` | Primary text |
+| `--color-text-muted` | `#6B6359` | Secondary text |
+| `--color-accent` | `#B8472A` | Primary accent (CTA, highlights) |
+| `--color-accent-hover` | `#9C3A21` | Accent hover state |
+| `--color-focus-ring` | `#B8472A` | Keyboard focus outline |
+
+**Rules:**
+- Dominant: `--color-bg` + `--color-text`. ~85% of the page.
+- Accent appears on no more than ~5% of any viewport.
+- Never use the accent for body copy or large surfaces.
+
+---
+
+## 3. Typography
+
+**Pairing:** [Display family] / [Body family]
+**Source:** Self-hosted woff2 in `/fonts/`. **Never** load from `fonts.googleapis.com`.
+
+| Style | Family | Size | Weight | Tracking | Line-height |
+|---|---|---|---|---|---|
+| Display (h1) | [Instrument Serif] | clamp(2.5rem, 5vw, 4.5rem) | 400 | -0.03em | 1.0 |
+| Heading (h2) | [Instrument Serif] | clamp(1.875rem, 3.5vw, 3rem) | 400 | -0.025em | 1.05 |
+| Subheading (h3) | [Geist] | 1.25rem | 600 | -0.015em | 1.2 |
+| Body | [Geist] | 1rem | 400 | 0 | 1.65 |
+| Small / Meta | [Geist] | 0.875rem | 400 | 0.01em | 1.5 |
+| Caption | [Geist] | 0.75rem | 500 | 0.04em (uppercase) | 1.4 |
+
+**Rules:**
+- 2 families maximum.
+- 2–4 weights total across both families.
+- Body measure: 60–75ch.
+
+---
+
+## 4. Component Stylings
+
+### Buttons
+
+| Variant | Background | Text | Border | Hover | Notes |
+|---|---|---|---|---|---|
+| Primary | `--color-accent` | `--color-bg` | none | `--color-accent-hover` + `translateY(-1px)` | CTA only, max 1 per viewport |
+| Secondary | transparent | `--color-text` | 1px `--color-border` | `--color-surface-2` background | Supporting actions |
+| Ghost | transparent | `--color-text-muted` | none | `--color-text` color | Tertiary, in-flow links |
+
+All buttons:
+- Padding: `0.875rem 1.5rem`
+- Border-radius: `[2px / 4px / 999px depending on direction]`
+- Font: body family, 500 weight, 0.9375rem
+- Transition: `transform 150ms ease-out, background-color 200ms ease-out`
+- `:focus-visible` → 2px outline in `--color-focus-ring`, 2px offset
+
+### Cards
+
+- Background: `--color-surface`
+- Border: 1px `--color-border` OR shadow (pick one, never both)
+- Padding: `1.5rem` mobile, `2rem` desktop
+- Border-radius: `[match button radius scale]`
+
+### Inputs
+
+- Background: `--color-bg`
+- Border: 1px `--color-border`, focus → 1px `--color-accent`
+- Padding: `0.75rem 1rem`
+- Label: always present and associated, never placeholder-as-label
+
+### Navigation
+
+- Height: 64px desktop, 56px mobile
+- Background: `--color-bg` with optional `backdrop-filter: blur(12px)` on scroll
+- Border-bottom: appears on scroll only, 1px `--color-border`
+
+---
+
+## 5. Layout Principles
+
+**Spacing scale (8pt rhythm):** 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px
+
+**Grid:**
+- Container max-width: 1200px (or 1280px / 1440px — pick one)
+- Gutter: 24px mobile, 32px desktop
+- Columns: 12 desktop, 4 mobile
+
+**Section padding:**
+- Vertical: 96px desktop, 64px mobile (minimum)
+- Hero: 120–160px desktop
+
+**Whitespace philosophy:** [generous / balanced / controlled-density]
+**Asymmetry:** [yes / no — and where, e.g. "hero offset 60/40, all other sections centered"]
+
+---
+
+## 6. Depth & Elevation
+
+Three explicit layers. No flat-everything, no shadow-everything.
+
+| Layer | Surface | Shadow | Use |
+|---|---|---|---|
+| Base | `--color-bg` | none | Page background |
+| Elevated | `--color-surface` | `0 1px 2px rgba(0,0,0,0.04)` | Cards, inline panels |
+| Floating | `--color-surface` | `0 12px 32px -8px rgba(0,0,0,0.12)` | Modals, dropdowns, sticky nav on scroll |
+
+**Texture (optional):** [grain overlay at 3% opacity / noise SVG / none]
+
+---
+
+## 7. Do's and Don'ts
+
+**Do**
+- Use the accent sparingly — it should feel earned.
+- Lead sections with type, support with imagery.
+- Favor regional / honest photography over stock.
+- Keep CTAs verb-first ("Tisch reservieren", not "Click here").
+
+**Don't**
+- Apply gradients to text or large surfaces.
+- Use emoji as icons. Lucide or Heroicons SVG only.
+- Stack more than 2 shadow levels.
+- Add a section just to fill the page.
+
+---
+
+## 8. Responsive Behavior
+
+**Breakpoints:** 375 / 768 / 1024 / 1440px
+
+**Touch targets:** ≥ 44×44px on viewports ≤ 768px.
+
+**Collapsing strategy:**
+- Multi-column → single column at 768px
+- Horizontal nav → hamburger at 768px
+- Hero text scales via `clamp()`, no separate mobile copy
+- Hero imagery: art-direct via `<picture>` if mobile crop differs meaningfully
+
+---
+
+## 9. Agent Prompt Guide
+
+**Quick color reference for prompts:**
+- Background: warm cream `#FAF7F2`
+- Accent: terracotta `#B8472A`
+- Text: near-black `#1C1A17`
+
+**Ready-to-use prompts:**
+
+> "Build the hero section for [Client]. Use direction `[warm-organic]`. Lead with an h1 in [Instrument Serif] at clamp(2.5rem, 5vw, 4.5rem), tracking -0.03em. Single primary CTA in `--color-accent`. Reference: see DESIGN.md §4 for button spec."
+
+> "Add a testimonials section. Three quotes max, no carousel, no avatars stock-photo style. Editorial layout, asymmetric. Body type at 1rem, line-height 1.65, measure 65ch. Use `--color-surface-2` as the section background to differentiate from base."
+
+---
+
+## 10. Brand Identity Artifacts
+
+### Logo
+
+- **Default (no client logo):** typografisches Wordmark im Header. Pattern wie [andreas-duerr.vercel.app](https://andreas-duerr.vercel.app/) — CSS-Gradient-Badge mit Anfangs-Letter (Display-Font, Fraunces o.ä.) + Wordmark-Text + optionaler Untertitel-Eyebrow. Kein File nötig, integriert sich natürlich in Type-System.
+- **Client-supplied:** SVG primär (`brand_assets/logo.svg`), PNG-Fallback (`brand_assets/logo.png`). Mindestens 256×256 für Skalierung.
+- **Sizing:** Header 1.4rem display-weight 600. Footer 1.15rem. Wordmark mit `<em>` für italic-accent-Treatment (Beispiel: `Gunkler · <em>Mein Bad</em>`).
+
+### Favicon
+
+- **Generated default:** `node generate-favicon.mjs` aus DESIGN.md-Tokens (liest `--color-accent` als Background, `--color-bg` als Foreground, Wordmark-Letter aus Folder-Slug). Output: `favicon.svg` (32×32 typografisch).
+- **Optional fallback set:** wenn `sharp` im master `node_modules` installiert ist, generiert das Script zusätzlich `favicon.ico` (32×32) + `apple-touch-icon.png` (180×180) für vollen Browser-Support inkl. iOS Safari.
+- **HTML head:**
+  ```html
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">           <!-- optional fallback -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">  <!-- optional fallback -->
+  ```
+- **Upgrade-Path (Premium-Branding):** Custom-Favicon in [Canva](https://www.canva.com/de_de/erstellen/favicon-generator/) als 512×512 PNG erstellen → durch [realfavicongenerator.net](https://realfavicongenerator.net/) jagen für vollständigen Set inkl. manifest.json → ersetze die generierten Files.
+
+### Photography
+
+**Source-Hierarchie** (in Reihenfolge):
+
+1. **Client-supplied** → `brand_assets/photography/` → Foto-Brief inventarisiert in INTAKE.md §5
+2. **Pexels (DSGVO-clean self-hosted)** via `node fetch-photos.mjs` → `assets/img/`
+3. **placehold.co** nur während Phase 1 Hero-Mockups — **niemals** in Production
+
+**Pexels-Workflow:**
+
+- Queries definieren in `pexels-config.json` — direction-matrix-spezifische Starter siehe [INSPIRATION.md §6](INSPIRATION.md)
+- `node fetch-photos.mjs` lädt zur Build-Zeit nach `assets/img/` als JPG, schreibt `assets/img/credits.json` mit Photographer-Metadata, injected Attribution-Block in `EXTERNAL_ASSETS.md` (idempotent, marker-based)
+- HTML referenziert ausschließlich lokale Pfade (`<img src="/assets/img/hero-michael-burrows-3825576.jpg">`)
+- Footer nennt Photographer-Names (kompakt: "Photos: Pexels · M. Burrows, A. Saunders, J. Doe") oder dedizierte Attribution-Page
+
+**Format-Rules:** Mindestens JPG large (1880×1880-ish vom Pexels `large2x`), `width`/`height` Attribute Pflicht, `loading="lazy"` unter dem Fold, `fetchpriority="high"` auf Hero-Image.
+
+---
+
+## Sign-off
+
+**Client:** [Name]
+**Direction locked:** [date]
+**Last updated:** [date]

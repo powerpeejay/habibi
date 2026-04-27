@@ -1,0 +1,10 @@
+{
+  "_comment": "Phase 3 — New Look by Habibi. Direction C (Habibi After Dark). Tungsten-warm low-light barbershop photography, hands-and-craft. Run: node fetch-photos.mjs",
+  "queries": [
+    { "name": "salon-interior", "query": "barbershop interior warm tungsten low light", "per_page": 4, "orientation": "portrait", "locale": "de-DE" },
+    { "name": "salon-detail",   "query": "barber chair leather warm light",              "per_page": 3, "orientation": "landscape", "locale": "de-DE" },
+    { "name": "team-portrait",  "query": "barber portrait warm light",                   "per_page": 6, "orientation": "portrait", "locale": "de-DE" },
+    { "name": "craft",          "query": "barber hands cutting hair detail",             "per_page": 3, "orientation": "landscape", "locale": "de-DE" },
+    { "name": "tools",          "query": "scissors comb wooden table detail",            "per_page": 3, "orientation": "landscape", "locale": "de-DE" }
+  ]
+}
